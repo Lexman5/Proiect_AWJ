@@ -1,8 +1,10 @@
 # Proiect_AWJ
-. Introducere:
-       Aplicația a fost realizată în Eclipse, cu Java. Aplicația preia numele unei imagini și calea către folderul în care se află, pe care o rotește cu 90, 180 sau 270 de grade și scrie noua imagine în fișierul selectat tot prin calea de acces.
+Introducere:
+   Aplicația a fost realizată în Eclipse, cu Java. Aplicația preia numele unei imagini și calea către folderul în care se află, pe care o rotește cu 90, 180 sau 270 de grade și scrie noua imagine în fișierul selectat tot prin calea de acces.
+   
 2. Descrierea aplicației:
-  Pentru implementare am folosit java.awt.image.BufferedImage. 
+  Pentru implementare am folosit java.awt.image.BufferedImage.
+
 Structura: Aplicația conține 2 pachete unul de bază (default package) și celălalt Algoritm. Pachetul default conține 3 clase (ReadClass, WriteClass și ImageProc) iar pachetul Algoritm conține interfața Algoritm și alte 4 clase (RotateImage, RotateImage90, RotateImage180, RotateImage270).
 ReadClass este o clasă abstractă în care este menționată metoda abstractă readImage de tip BufferedImage cu parametrul path, reprezentând calea fișierului de intrare în care se află imaginea.
 WriteClass, clasă abstractă, moștenește clasa ReadClass, implementează metoda readImage, pentru citirea imaginii, (Override) și conține metoda abstractă writeImage de tip void, cu parametrii path și image, imaginea care trebuie rotită și calea către fișierul de ieșire.
@@ -10,7 +12,7 @@ ImageProc, moștenește WriteClass, implementează metodele abstracte writeImage
 Algoritm este interfața și conține declarată metoda void applyAlgoritm.
 RotateImage este o clasă abstractă care implementează Algoritm, conține variabilele private bufferedImage și rotatedImage care au metodele get și set, specifice încapsulării ce are loc. De asemenea conține funcția sum cu număr de argumente variabil (varargs), metoda abstractă void Rotate, iar metoda applyAlgoritm este implementată.
 RotateImage90, RotateImage180, RotateImage270 moștenesc clasa RotateImage și implementează metoda Rotate, în care se realizează efectiv rotirea imaginii. Acestea sunt instanțe ale clasei abstracte RotateImage, au funcția abstractă Rotate și astfel apare Polimorfismul.
-3. Cerințele aplicației :
+4. Cerințele aplicației :
 1. Imaginea este un fișier BMP.
 2. A fost folosit cod low level.
 3. Include conceptele POO: 
